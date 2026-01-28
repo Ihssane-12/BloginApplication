@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .mobile-frame {
+            width: 375px;
+            height: 812px;
+        }
+    
+        .title-animation {
+            animation: fadeInDown 0.8s ease-out;
+        }
+        
+    </style>
+</head>
+<body class=" flex items-center justify-center min-h-screen p-4">
+    <div class="mobile-frame bg-black rounded-3xl shadow-2xl overflow-hidden  flex flex-col relative">
+       
+
+        <div class="flex-1 relative overflow-hidden bg-cover bg-center" style="background-image: url('/imgs/télécharger\ \(15\).jpg');">
+
+            <div class="absolute inset-0 flex flex-col justify-between items-center px-8 pt-20 pb-16">
+                <div class="text-center title-animation z-10">
+                    <h1 class="text-4xl font-bold text-black leading-tight">
+                        Shoot Beyond<br>
+                        <span class="text-2xl font-light">To Limits</span>
+                    </h1>
+                </div>
+
+                <div class="w-full flex flex-col items-center gap-4 btn-animation">
+                    <button class="w-full max-w-xs px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white font-bold text-lg rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center justify-between group">
+                        <span>Get Start</span>
+                        <span class="ml-2 group-hover:translate-x-1 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+	                            <path fill="currentColor" d="M11 2L9.7 3.3l6.6 6.7l-6.6 6.7L11 18l8-8zM2.5 2L1 3.3L7.8 10l-6.7 6.7L2.5 18l8-8z"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
