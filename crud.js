@@ -45,3 +45,13 @@ function createArticle(data) {
     `;
 
     articlesContainer.appendChild(article);
+        // === COMMIT: add actions menu toggle to articles ===
+    // git commit -m "add actions menu toggle to articles"
+
+    const menuBtn = article.querySelector(".menu-btn");
+    const menu = article.querySelector(".menu");
+
+    menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+
