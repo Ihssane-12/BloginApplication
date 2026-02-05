@@ -116,5 +116,23 @@ btn.onclick = function (e) {
     category.value = "";
     imageUrl.value = "";
 };
+// === COMMIT: add cancel edit and form reset behavior ===
+// git commit -m "add cancel edit and form reset behavior"
+
+cancelBtn.onclick = function () {
+    if (articleToEdit) {
+        articleToEdit.classList.remove("ring-2", "ring-green-500");
+    }
+
+    articleToEdit = null;
+    btn.innerText = "Save";
+    cancelBtn.classList.add("hidden");
+
+    title.value = "";
+    destination.value = "";
+    note.value = "";
+    category.value = "";
+    imageUrl.value = "";
+};
 
 
