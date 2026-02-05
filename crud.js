@@ -54,4 +54,11 @@ function createArticle(data) {
     menuBtn.addEventListener("click", () => {
         menu.classList.toggle("hidden");
     });
+    // === COMMIT: implement article delete functionality ===
+    // git commit -m "implement article delete functionality"
+
+    const deleteBtn = article.querySelector(".delete");
+    deleteBtn.addEventListener("click", () => {
+        article.remove();
+    });
 
