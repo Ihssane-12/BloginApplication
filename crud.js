@@ -82,5 +82,39 @@ function createArticle(data) {
         menu.classList.add("hidden");
     });
 }
+// === COMMIT: handle create and update article actions ===
+// git commit -m "handle create and update article actions"
+
+btn.onclick = function (e) {
+    e.preventDefault();
+
+    if (articleToEdit) {
+        articleToEdit.querySelector(".title").innerText = title.value;
+        articleToEdit.querySelector(".destination").innerText = destination.value;
+        articleToEdit.querySelector(".note").innerText = note.value;
+        articleToEdit.querySelector(".category").innerText = category.value;
+        articleToEdit.querySelector("img").src = imageUrl.value;
+
+        articleToEdit.classList.remove("ring-2", "ring-green-500");
+
+        articleToEdit = null;
+        btn.innerText = "Save";
+        cancelBtn.classList.add("hidden");
+    } else {
+        createArticle({
+            title: title.value,
+            destination: destination.value,
+            note: note.value,
+            category: category.value,
+            imageUrl: imageUrl.value
+        });
+    }
+
+    title.value = "";
+    destination.value = "";
+    note.value = "";
+    category.value = "";
+    imageUrl.value = "";
+};
 
 
