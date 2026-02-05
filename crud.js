@@ -61,4 +61,26 @@ function createArticle(data) {
     deleteBtn.addEventListener("click", () => {
         article.remove();
     });
+        // === COMMIT: enable article editing mode with form prefill ===
+    // git commit -m "enable article editing mode with form prefill"
+
+    const editBtn = article.querySelector(".edit");
+    editBtn.addEventListener("click", () => {
+        articleToEdit = article;
+
+        article.classList.add("ring-2", "ring-green-500");
+
+        title.value = article.querySelector(".title").innerText;
+        destination.value = article.querySelector(".destination").innerText;
+        note.value = article.querySelector(".note").innerText;
+        category.value = article.querySelector(".category").innerText;
+        imageUrl.value = article.querySelector("img").src;
+
+        btn.innerText = "Update";
+        cancelBtn.classList.remove("hidden");
+
+        menu.classList.add("hidden");
+    });
+}
+
 
