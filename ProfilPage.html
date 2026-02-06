@@ -73,3 +73,35 @@
             Add
         </label>
     </div>
+    <!-- COMMIT: add modal form for creating article -->
+<!-- -->
+
+<input type="checkbox" id="a" class="peer hidden">
+
+<section
+    class="hidden peer-checked:flex fixed inset-0 z-50 bg-black/40 backdrop-blur-sm items-center justify-center p-4">
+
+    <div class="bg-white w-full max-w-md rounded-3xl shadow-xl p-6">
+        <h1 class="text-center text-xl font-extrabold mb-6">Add Destination</h1>
+
+        <div class="space-y-4">
+            <input id="title" placeholder="Title" class="w-full p-3 rounded-xl border">
+            <input id="destination" placeholder="Destination" class="w-full p-3 rounded-xl border">
+            <input id="note" type="number" min="0" max="5" placeholder="Note"
+                class="w-full p-3 rounded-xl border">
+            <input id="category" placeholder="Category" class="w-full p-3 rounded-xl border">
+            <input id="image-url" placeholder="Image URL" class="w-full p-3 rounded-xl border">
+        </div>
+
+        <div class="flex gap-4 mt-6">
+            <label for="a" id="button"
+                class="flex-1 bg-green-600 text-white py-3 rounded-xl text-center font-bold cursor-pointer">
+                Save
+            </label>
+            <label for="a"
+                class="flex-1 bg-gray-200 py-3 rounded-xl text-center font-bold cursor-pointer">
+                Cancel
+            </label>
+        </div>
+    </div>
+</section>
